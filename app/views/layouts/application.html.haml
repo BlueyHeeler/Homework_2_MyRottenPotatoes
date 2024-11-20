@@ -1,0 +1,14 @@
+!!! 5
+%html
+  %head
+    %title MyRottenPotatoes!
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload', defer: true
+    = csrf_meta_tags
+
+  %body
+    #main
+      = yield
+
+    - if flash[:notice]
+      %p.notice= flash[:notice]
