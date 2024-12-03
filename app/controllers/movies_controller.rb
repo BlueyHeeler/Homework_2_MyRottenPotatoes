@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
     def index
-        @movies = Movie.all
+        @movies = Movie.order(:title)
     end
 
     def show
@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
     end
 
     def new
+        flash.now[:notice]= "Please fill out all field carefully."
         # default: render 'new' template
     end
 
@@ -24,7 +25,7 @@ class MoviesController < ApplicationController
     end
 
     def edit
-        @movie = Movie.find params[:id]
+        @movie = Movie.find(params[:id]) # Buscar o filme pelo ID
     end
 
     def update
@@ -48,7 +49,7 @@ class MoviesController < ApplicationController
 
     # Strong Parameters para permitir somente os campos necessários
     def movie_params
-        params.require(:movie).permit(:title, :rating, :release_date)
+        params.require(:movie).permit(:title, :rating, :description, :release_date, :image)
     end
 end
 

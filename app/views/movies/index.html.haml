@@ -1,3 +1,7 @@
+%h1.title
+  = image_tag 'logo.png', alt: 'MyRottenPotatoes Logo', class: 'site-logo', width: 50
+  MyRottenPotatoes
+
 %h1 All Movies
 
 %table#movies
@@ -19,6 +23,6 @@
         %td= link_to 'Edit info', edit_movie_path(movie)
         %td= button_to 'Delete', movie_path(movie), method: :delete, data: { confirm: 'Are you sure?' }, onclick: 'return confirm("Are you sure?")'
 
-
 = link_to 'Add new movie', new_movie_path, class: 'button'
+
 

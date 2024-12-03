@@ -46,8 +46,8 @@ h1 {
 h1.title {
     margin: 0 0 1em;
     padding: 10px;
-    background-color: orange;
-    color: white;
+    background-color: white;
+    color: gold;
     border-bottom: 4px solid gold;
     font-size: 2em;
     font-style: normal;
@@ -85,3 +85,12 @@ form label {
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px
+}
+.movie-image {
+    border: 5px solid gold; /* Apenas se desejar manter a borda */
+    padding: 0px;
+    border-radius: 15px;
+    width: 200px; /* Define uma largura máxima */
+    height: 300px; /* Altura fixa */
+}
+
