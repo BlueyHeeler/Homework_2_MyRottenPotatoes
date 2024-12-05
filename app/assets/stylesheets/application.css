@@ -93,4 +93,79 @@ form label {
     width: 200px; /* Define uma largura máxima */
     height: 300px; /* Altura fixa */
 }
+/* Ajuste do contêiner principal */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que o sidebar fique abaixo em telas pequenas */
+    justify-content: space-between;
+    gap: 20px; /* Espaçamento natural entre as colunas */
+}
+
+/* Área principal */
+.main-content {
+    flex: 3;
+    min-width: 60%; /* Mantém uma largura mínima */
+}
+
+/* Sidebar refinado */
+.sidebar {
+    flex: 1;
+    max-width: 250px; /* Largura fixa, para manter uma aparência organizada */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center; /* Centraliza as imagens */
+}
+
+.sidebar h2 {
+    font-size: 1.2em;
+    color: maroon;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Lista de imagens no sidebar */
+.movie-images {
+    list-style: none; /* Remove marcadores */
+    padding: 0;
+    margin: 0;
+}
+
+.movie-images li {
+    margin-bottom: 15px; /* Espaçamento entre as imagens */
+}
+
+/* Estilo das imagens */
+.sidebar-movie-image {
+    width: 100%; /* Ocupa a largura máxima do sidebar */
+    height: auto; /* Mantém proporções */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Estilo para o botão abaixo da tabela */
+.add-movie-link {
+    margin-top: 20px; /* Espaçamento acima do botão */
+    text-align: center; /* Centraliza o botão horizontalmente */
+}
+
+.add-movie-link .button {
+    background-color: maroon;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-movie-link .button:hover {
+    background-color: darkred;
+}
+
 
