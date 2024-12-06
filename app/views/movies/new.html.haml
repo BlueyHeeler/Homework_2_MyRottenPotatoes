@@ -17,4 +17,6 @@
   = file_field :movie, :image
 
   = submit_tag 'Save Changes'
+  %br
+  = button_tag 'Back to movie list', type: 'button', onclick: "window.location='#{movies_path}'"
 

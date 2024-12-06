@@ -13,6 +13,8 @@
     Description:
     = @movie.description
 
-= link_to 'Back to movie list', movies_path
 %br
-= link_to 'Edit', edit_movie_path(@movie.id)
+  = button_tag 'Back to movie list', type: 'button', onclick: "window.location='#{movies_path}'"
+%br
+  = button_tag 'Edit', type: 'button', onclick: "window.location='#{edit_movie_path(@movie.id)}'"
+

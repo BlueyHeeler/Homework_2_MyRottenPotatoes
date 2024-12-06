@@ -148,7 +148,7 @@ form label {
 /* Estilo para o botão abaixo da tabela */
 .add-movie-link {
     margin-top: 20px; /* Espaçamento acima do botão */
-    text-align: center; /* Centraliza o botão horizontalmente */
+    /*text-align: center; /* Centraliza o botão horizontalmente */
 }
 
 .add-movie-link .button {

@@ -31,4 +31,4 @@
     = f.submit 'Save Changes'
 
   %div
-    = link_to 'Back to movie list', movies_path
+  = button_tag 'Back to movie list', type: 'button', onclick: "window.location='#{movies_path}'"
