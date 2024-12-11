@@ -29,10 +29,12 @@ class MoviesController < ApplicationController
     end
 
     def update
-        @movie = Movie.find params[:id]
-        if @movie.update!(movie_params) # Use Strong Parameters aqui
-            flash[:notice] = "#{@movie.title} was successfully updated."
-            redirect_to movie_path(@movie)
+        @movie = Movie.find(params[:id])
+        if @movie.update(movie_params)
+            if params[:star] && params[:star][:value]
+                @movie.stars.create(value: params[:star][:value])
+            end
+            redirect_to @movie
         else
             render :edit
         end

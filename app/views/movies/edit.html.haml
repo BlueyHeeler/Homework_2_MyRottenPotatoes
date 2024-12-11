@@ -28,6 +28,10 @@
     = f.file_field :image  # Campo de upload para nova imagem
 
   %div
+    = f.label :new_star, "Add Star"
+    = number_field_tag "star[value]", nil, min: 0, max: 5, step: 0.1
+
+  %div
     = f.submit 'Save Changes'
 
   %div
