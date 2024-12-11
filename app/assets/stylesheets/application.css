@@ -16,33 +16,32 @@
 
 /* Simple CSS styling for RottenPotatoes app */
 /* Add these lines to app/assets/stylesheets/application.css */
-
 html, body {
     margin: 0;
     padding: 0;
-    background: White;
+    background: white;
     color: DarkSlateGrey;
     font-family: Tahoma, Verdana, sans-serif;
     font-size: 10pt;
 }
+
 div#main {
-    margin: 0;
     padding: 0 20px 20px;
 }
+
 a {
-    background: transparent;
     color: maroon;
     text-decoration: underline;
     font-weight: bold;
 }
+
 h1 {
     color: maroon;
     font-size: 150%;
     font-style: italic;
-    display: block;
-    width: 100%;
     border-bottom: 1px solid DarkSlateGrey;
 }
+
 h1.title {
     margin: 0 0 1em;
     padding: 10px;
@@ -50,105 +49,49 @@ h1.title {
     color: gold;
     border-bottom: 4px solid gold;
     font-size: 2em;
-    font-style: normal;
 }
+
 table#movies {
     margin: 10px;
     border-collapse: collapse;
     width: 100%;
     border-bottom: 2px solid black;
 }
+
 table#movies th {
     border: 2px solid white;
     font-weight: bold;
     background-color: wheat;
-}
-table#movies th, table#movies td {
     padding: 4px;
     text-align: left;
 }
-#notice, #warning {
-background: rosybrown;
-margin: 1em 0;
-padding: 4px;
-}
-form label {
-    display: block;
-    line-height: 25px;
-    font-weight: bold;
-    color: maroon;
-}
-.notice {
-    color: green;
-    background-color: #e0ffe0;
-    border: 1px solid #b0ffb0;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px
-}
-.movie-image {
-    border: 5px solid gold; /* Apenas se desejar manter a borda */
-    padding: 0px;
-    border-radius: 15px;
-    width: 200px; /* Define uma largura máxima */
-    height: 300px; /* Altura fixa */
-}
-/* Ajuste do contêiner principal */
-.container {
-    display: flex;
-    flex-wrap: wrap; /* Permite que o sidebar fique abaixo em telas pequenas */
-    justify-content: space-between;
-    gap: 20px; /* Espaçamento natural entre as colunas */
+
+table#movies td {
+    padding: 4px;
+    text-align: left;
 }
 
-/* Área principal */
-.main-content {
-    flex: 3;
-    min-width: 60%; /* Mantém uma largura mínima */
-}
-
-/* Sidebar refinado */
 .sidebar {
-    flex: 1;
-    max-width: 250px; /* Largura fixa, para manter uma aparência organizada */
-    background-color: #f9f9f9;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: center; /* Centraliza as imagens */
+    width: 300px;
 }
 
-.sidebar h2 {
-    font-size: 1.2em;
-    color: maroon;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
+.scrollable {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
 
-/* Lista de imagens no sidebar */
-.movie-images {
-    list-style: none; /* Remove marcadores */
-    padding: 0;
-    margin: 0;
-}
-
-.movie-images li {
-    margin-bottom: 15px; /* Espaçamento entre as imagens */
-}
-
-/* Estilo das imagens */
 .sidebar-movie-image {
-    width: 100%; /* Ocupa a largura máxima do sidebar */
-    height: auto; /* Mantém proporções */
+    width: 100%;
+    height: auto;
     border-radius: 8px;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
-/* Estilo para o botão abaixo da tabela */
+
 .add-movie-link {
-    margin-top: 20px; /* Espaçamento acima do botão */
-    /*text-align: center; /* Centraliza o botão horizontalmente */
+    margin-top: 20px;
 }
 
 .add-movie-link .button {
@@ -167,5 +110,19 @@ form label {
 .add-movie-link .button:hover {
     background-color: darkred;
 }
+.container {
+    display: flex; /* Ativa o layout em linha */
+    justify-content: space-between; /* Distribui espaço entre os itens */
+    gap: 20px; /* Espaçamento entre a tabela e o sidebar */
+}
 
+.main-content {
+    flex: 3; /* Ocupará mais espaço que o sidebar */
+    min-width: 60%; /* Garante largura mínima */
+}
+
+.sidebar {
+    flex: 1; /* Sidebar ocupa menos espaço */
+    max-width: 300px; /* Limita a largura máxima */
+}
 

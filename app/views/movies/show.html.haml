@@ -15,9 +15,11 @@
   %li
     Stars:
     = @movie.average_stars.round(2)
+  %li
+    Rated by:
+    = pluralize(@movie.stars.size, "humans") # Ajuste conforme o método correto no modelo
 
 %br
-  = button_tag 'Back to movie list', type: 'button', onclick: "window.location='#{movies_path}'"
+= link_to 'Back to movie list', movies_path, class: 'button'
 %br
-  = button_tag 'Edit', type: 'button', onclick: "window.location='#{edit_movie_path(@movie.id)}'"
-
+= link_to 'Edit', edit_movie_path(@movie.id), class: 'button'

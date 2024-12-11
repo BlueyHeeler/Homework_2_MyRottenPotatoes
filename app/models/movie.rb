@@ -7,4 +7,9 @@ class Movie < ApplicationRecord
         return 0 if stars.empty?
         stars.average(:value).to_f # Calcula média usando ActiveRecord
     end
+
+    def number_of_stars
+        return 0 if stars.empty?
+        stars.size.to_f
+    end
 end
