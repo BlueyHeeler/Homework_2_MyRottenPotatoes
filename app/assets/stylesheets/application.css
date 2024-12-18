@@ -125,4 +125,8 @@ table#movies td {
     flex: 1; /* Sidebar ocupa menos espaço */
     max-width: 300px; /* Limita a largura máxima */
 }
+.movie-image {
+    width: 300px;
+    height: auto;
+}
 

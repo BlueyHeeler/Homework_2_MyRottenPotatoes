@@ -2,7 +2,7 @@
 
 %ul#details
   - if @movie.image.attached?
-    = image_tag url_for(@movie.image), alt: "Movie Image", class: "movie-image"
+    = image_tag url_for(@movie.image), alt: "Movie Image", width: 200
   %li
     Rating:
     = @movie.rating
